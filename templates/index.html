@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jan  6 17:09:38 2024
+
+@author: sbkum
+"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/predict" method="post">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" id="sentence" name="sentence" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if sentence %}
+        <p>Input sentence: {{ sentence }}</p>
+        <p>Predicted sentiment: {{ prediction }}</p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+
