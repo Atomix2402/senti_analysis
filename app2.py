@@ -38,7 +38,7 @@ def main():
     statement = st.text_input("Enter the statement")
     
     #code for prediction 
-    sentiment = 'Failed'
+    sentiment = 'Type any statement to check the sentiment'
     
     #creating a button for prediction
     if st.button('Sentiment of Statement'):
