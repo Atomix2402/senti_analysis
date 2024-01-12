@@ -17,8 +17,8 @@ from flask_cors import CORS
 
 
 def sentiment_prediction(sentence):
-    df = pd.read_csv('D:/Study Stuff/TheITStudio/data.csv')
-    model = load_model('D:/Study Stuff/TheITStudio/itStudio.h5')
+    df = pd.read_csv('data.csv')
+    model = load_model('itStudio.h5')
 
     X_train, X_test, y_train, y_test = train_test_split(df.Sentence, df.Sentiment, test_size=0.2, random_state=42)
     token = Tokenizer(num_words=None)
