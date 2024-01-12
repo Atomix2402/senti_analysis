@@ -7,13 +7,10 @@ Created on Thu Jan 11 22:45:33 2024
 import streamlit as st
 import pandas as pd
 import numpy as np
-from flask import Flask, render_template, request, jsonify
-from flask_restful import Api, Resource
 from sklearn.model_selection import train_test_split
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-from flask_cors import CORS
 
 
 def sentiment_prediction(sentence):
